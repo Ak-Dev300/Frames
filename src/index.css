@@ -1,0 +1,253 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: none;
+}
+
+#login{
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background: url("./imgs/background.jpg");
+  background-color: gray;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#login h3{
+  font-size: 40px;
+  color: white;
+}
+
+form{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 90px;
+  margin-top: 20px;
+}
+
+#input-mail, #input-password{
+  height: 40px;
+  width: 350px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  text-indent: 15px;
+  font-size: 18px;
+}
+
+#login-info{
+  padding-top: 10px;
+  color: white;
+}
+
+#login-btn{
+  margin-top: 10px;
+  width: 350px;
+  height: 40px;
+  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#forgot-p{
+  color: rosybrown;
+  padding-top: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+nav{
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 40px;
+  height: 80px;
+  border-bottom: 1px solid rgb(212, 212, 212);
+  box-shadow: 0px 1px 5px rgb(199, 199, 199);
+  /* padding-right: 200px; */
+}
+
+#nav-title{
+  font-size: 29px;
+  color: black;
+  font-weight: 700;
+}
+
+#links{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#links li{
+  margin: 0px 12px;
+  border: none;
+  border-radius: 20px;
+  padding: 7px 15px;
+  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+
+#links li:hover{
+  transform: scale(1.2);
+}
+
+a{
+  color: white;
+}
+
+#logout-btn{
+  border: none;
+  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+#img-div{
+  position: relative;
+  z-index: 9;
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+img{
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+#showroom{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column-gap: 5px;
+  grid-row-gap: 2px;
+  /* grid-auto-rows: 1fr;
+  grid-auto-flow: dense; */
+  padding-top: 90px;
+  padding-bottom: 100px;
+  padding-left: 15px;
+  text-align: center;
+}
+
+#drop-menu{
+  width: 100%;
+  background-color: white;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 10px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgb(212, 212, 212);
+  box-shadow: 0px 1px 5px rgb(199, 199, 199);
+  position: absolute;
+  z-index: 999;
+  transition: all ease 0.4s;
+}
+
+#links-drop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  list-style: none;
+  width: 100%;
+}
+
+#links-drop li{
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid rgb(189, 189, 189);
+  /* background-color: aqua; */
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+
+#links-drop li:hover{
+  background-color: rgb(219, 218, 218);
+}
+
+#drop-head{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding-block: 20px;
+}
+
+#drop-title{
+  font-weight: 700;
+}
+
+.logout-btn{
+  margin-top: 30px;
+}
+
+#list,#x{
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 940px) {
+  nav{
+    height: 60px;
+    padding: 0px 20px;
+    position: absolute;
+    top: 0;
+  }
+
+  #nav-title{
+    font-size: 25px;
+  }
+
+  #links,nav button{
+    display: none;
+  }
+
+  #drop-menu{
+    display: flex;
+  }
+
+  #list,#x{
+    display: block;
+  }
+
+  #login-btn,#input-mail,#input-password{
+    width: 80%;
+  }
+}
